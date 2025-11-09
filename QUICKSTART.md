@@ -53,7 +53,7 @@ git push origin main
    - The workflow will automatically deploy on push to main
 
 3. **Access your game:**
-   - Your game will be live at: `https://yourusername.github.io/snake-game`
+   - Your game will be live at: `https://kyroskoh.github.io/snake-game`
    - It may take 1-2 minutes for the first deployment
 
 ### Option 2: Manual Deployment
