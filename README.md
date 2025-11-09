@@ -2,6 +2,7 @@
 
 A classic Snake game reimagined with a sleek, modern interface and responsive design. Built with vanilla JavaScript, HTML5 Canvas, and CSS3.
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://kyroskoh.github.io/snake-game/)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
