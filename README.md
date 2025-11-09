@@ -170,9 +170,9 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
+Kyros Koh - [me@kyroskoh.com](mailto:me@kyroskoh.com)
 
-Project Link: [https://github.com/yourusername/snake-game](https://github.com/yourusername/snake-game)
+Project Link: [https://github.com/kyroskoh/snake-game](https://github.com/kyroskoh/snake-game)
 
 ---
 
