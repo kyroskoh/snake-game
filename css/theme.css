@@ -1,0 +1,140 @@
+/* ===========================
+   Theme Styles
+   =========================== */
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+    --bg-primary: #0a0e27;
+    --bg-secondary: #151b3d;
+    --bg-gradient-start: #0a0e27;
+    --bg-gradient-end: #1a1f4a;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #a0aec0;
+    --text-accent: #00ff88;
+    
+    --accent-primary: #00ff88;
+    --accent-secondary: #00ccff;
+    --accent-danger: #ff4757;
+    
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    --snake-color: #00ff88;
+    --food-color: #ff4757;
+    --grid-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f7fafc;
+    --bg-secondary: #ffffff;
+    --bg-gradient-start: #e6f7ff;
+    --bg-gradient-end: #f0f4ff;
+    
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --text-accent: #00b35a;
+    
+    --accent-primary: #00b35a;
+    --accent-secondary: #0099cc;
+    --accent-danger: #e63946;
+    
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    
+    --snake-color: #00b35a;
+    --food-color: #e63946;
+    --grid-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .game-title {
+    text-shadow: 0 0 20px rgba(0, 179, 90, 0.2);
+}
+
+[data-theme="light"] .btn-primary {
+    color: #ffffff;
+}
+
+[data-theme="light"] .btn-outline:hover {
+    color: #ffffff;
+}
+
+/* Neon Theme */
+[data-theme="neon"] {
+    --bg-primary: #000000;
+    --bg-secondary: #0d0d0d;
+    --bg-gradient-start: #000000;
+    --bg-gradient-end: #1a0033;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b794f6;
+    --text-accent: #ff00ff;
+    
+    --accent-primary: #ff00ff;
+    --accent-secondary: #00ffff;
+    --accent-danger: #ff0066;
+    
+    --border-color: rgba(255, 0, 255, 0.3);
+    --shadow-color: rgba(255, 0, 255, 0.3);
+    
+    --snake-color: #ff00ff;
+    --food-color: #00ffff;
+    --grid-color: rgba(255, 0, 255, 0.1);
+}
+
+[data-theme="neon"] .game-title {
+    text-shadow: 0 0 30px rgba(255, 0, 255, 0.8),
+                 0 0 60px rgba(255, 0, 255, 0.6);
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: 0 0 30px rgba(255, 0, 255, 0.8),
+                     0 0 60px rgba(255, 0, 255, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 40px rgba(255, 0, 255, 1),
+                     0 0 80px rgba(255, 0, 255, 0.8),
+                     0 0 100px rgba(255, 0, 255, 0.6);
+    }
+}
+
+[data-theme="neon"] .btn-primary {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5),
+                0 0 40px rgba(255, 0, 255, 0.3);
+}
+
+[data-theme="neon"] .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 255, 0.7),
+                0 0 60px rgba(255, 0, 255, 0.5);
+}
+
+[data-theme="neon"] #game-canvas {
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.4),
+                0 0 80px rgba(255, 0, 255, 0.2);
+}
+
+[data-theme="neon"] .score-display .value,
+[data-theme="neon"] .level-display .value {
+    text-shadow: 0 0 10px currentColor;
+}
+
+/* Theme-specific animations */
+[data-theme="neon"] .background-gradient {
+    animation: neonGradientShift 8s ease infinite;
+}
+
+@keyframes neonGradientShift {
+    0%, 100% {
+        background: linear-gradient(135deg, #000000 0%, #1a0033 100%);
+    }
+    33% {
+        background: linear-gradient(135deg, #000000 0%, #001a33 100%);
+    }
+    66% {
+        background: linear-gradient(135deg, #1a0033 0%, #000000 100%);
+    }
+}
+
