@@ -153,6 +153,12 @@ body {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
     font-size: 1em;
+    /* Override parent's transparent text */
+    -webkit-text-fill-color: initial;
+    color: inherit;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
 }
 
 @keyframes wiggle {
