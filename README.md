@@ -22,7 +22,7 @@ A classic Snake game reimagined with a sleek, modern interface and responsive de
 
 ### Play Online
 
-Visit the live demo: **[Your GitHub Pages URL]**
+🎮 **[Play Now!](https://kyroskoh.github.io/snake-game/)** - https://kyroskoh.github.io/snake-game/
 
 ### Run Locally
 
