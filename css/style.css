@@ -428,10 +428,16 @@ body {
     flex-direction: column;
     gap: 0.25rem;
     min-width: 100px;
+    overflow: hidden;
+}
+
+.score-display {
+    justify-self: start;
 }
 
 .level-display {
     text-align: center;
+    justify-self: center;
 }
 
 .controls {
@@ -452,6 +458,9 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--accent-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .controls {
@@ -723,6 +732,12 @@ body {
 /* ===========================
    Responsive Design
    =========================== */
+@media (max-width: 900px) {
+    .game-header {
+        gap: var(--spacing-md);
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         max-height: 100vh;
@@ -734,18 +749,33 @@ body {
     }
     
     .game-header {
+        grid-template-columns: 1fr 1fr 1fr;
         padding: var(--spacing-sm);
-        gap: var(--spacing-sm);
+        gap: var(--spacing-xs);
     }
     
     .score-display,
     .level-display {
-        min-width: 80px;
+        min-width: 70px;
+    }
+    
+    .score-display .label,
+    .level-display .label {
+        font-size: 0.7rem;
     }
     
     .score-display .value,
     .level-display .value {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    
+    .controls {
+        gap: 0.25rem;
+    }
+    
+    .btn-icon-only {
+        padding: 0.5rem;
+        font-size: 1rem;
     }
     
     .btn-group {
@@ -765,6 +795,34 @@ body {
     .btn {
         padding: var(--spacing-sm) var(--spacing-md);
         font-size: 0.9rem;
+    }
+    
+    .game-header {
+        grid-template-columns: minmax(60px, 1fr) minmax(60px, 1fr) minmax(70px, auto);
+        padding: 0.5rem;
+        gap: 0.25rem;
+    }
+    
+    .score-display,
+    .level-display {
+        min-width: 60px;
+    }
+    
+    .score-display .label,
+    .level-display .label {
+        font-size: 0.65rem;
+        letter-spacing: 0.05em;
+    }
+    
+    .score-display .value,
+    .level-display .value {
+        font-size: 1rem;
+    }
+    
+    .btn-icon-only {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+        min-width: 32px;
     }
 }
 
