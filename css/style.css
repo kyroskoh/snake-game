@@ -88,6 +88,8 @@ body {
     max-height: 800px;
     padding: var(--spacing-md);
     position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .screen {
@@ -103,6 +105,9 @@ body {
     visibility: hidden;
     transition: opacity var(--transition-medium), visibility var(--transition-medium);
     padding: var(--spacing-md);
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .screen.active {
@@ -118,6 +123,7 @@ body {
     width: 100%;
     max-width: 500px;
     animation: fadeInScale 0.6s ease;
+    margin: auto 0;
 }
 
 @keyframes fadeInScale {
@@ -759,6 +765,10 @@ body {
         padding: var(--spacing-sm);
     }
     
+    .screen {
+        padding: var(--spacing-sm);
+    }
+    
     .mobile-controls {
         display: block;
     }
@@ -825,14 +835,99 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .screen {
+        align-items: flex-start;
+        padding-top: var(--spacing-lg);
+        padding-bottom: var(--spacing-lg);
+    }
+    
+    .menu-content {
+        max-width: 90%;
+        padding: 0 var(--spacing-sm);
+        margin: 0 auto;
+    }
+    
     .game-title {
-        font-size: 2rem;
+        font-size: clamp(2rem, 7vw, 2.5rem);
+        margin-bottom: 0.5rem;
+    }
+    
+    .game-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: var(--spacing-md);
+        letter-spacing: 0.15em;
+    }
+    
+    .menu-options {
+        gap: var(--spacing-sm);
     }
     
     .btn {
-        padding: var(--spacing-sm) var(--spacing-md);
-        font-size: 0.9rem;
+        padding: 0.875rem var(--spacing-md);
+        font-size: 0.875rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.75rem var(--spacing-sm);
+        font-size: 0.8rem;
+    }
+    
+    .difficulty-selector label,
+    .theme-selector label {
+        font-size: 0.85rem;
+    }
+    
+    .developer-credit {
+        margin-top: var(--spacing-md);
+        padding-top: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
+    }
+    
+    .developer-credit p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .screen {
+        padding-top: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+    }
+    
+    .game-title {
+        font-size: clamp(1.75rem, 6vw, 2rem);
+        letter-spacing: 0.05em;
+        margin-bottom: 0.375rem;
+    }
+    
+    .game-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    .btn {
+        padding: 0.75rem var(--spacing-sm);
+        font-size: 0.825rem;
+    }
+    
+    .btn-group {
+        gap: 0.375rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.65rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .menu-options {
+        gap: 0.75rem;
+    }
+    
+    .difficulty-selector,
+    .theme-selector {
+        margin-bottom: 0;
     }
     
     .game-header {
@@ -856,9 +951,61 @@ body {
         font-size: 0.85rem;
         min-width: 30px;
     }
+    
+    .toggle-text {
+        font-size: 0.8rem;
+    }
+    
+    .developer-credit {
+        margin-top: var(--spacing-sm);
+        padding-top: 0.5rem;
+    }
+    
+    .developer-credit p {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 360px) {
+    .screen {
+        padding: var(--spacing-sm);
+    }
+    
+    .menu-content {
+        max-width: 100%;
+        padding: 0 0.25rem;
+    }
+    
+    .game-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .game-subtitle {
+        font-size: 0.65rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .btn-group .btn {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.65rem;
+    }
+    
+    .menu-options {
+        gap: 0.625rem;
+    }
+    
+    .difficulty-selector label,
+    .theme-selector label {
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+    
     .game-header {
         grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) auto;
         padding: 0.4rem 0.5rem;
@@ -874,6 +1021,30 @@ body {
         padding: 0.3rem;
         font-size: 0.8rem;
         min-width: 28px;
+    }
+    
+    .developer-credit {
+        margin-top: 0.625rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .developer-credit p {
+        font-size: 0.65rem;
+    }
+    
+    .toggle-slider {
+        width: 45px;
+        height: 24px;
+    }
+    
+    .toggle-slider::before {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .toggle-text {
+        font-size: 0.75rem;
     }
 }
 
