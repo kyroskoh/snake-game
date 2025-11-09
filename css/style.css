@@ -147,11 +147,21 @@ body {
 .snake-emoji {
     display: inline-block;
     animation: wiggle 2s ease-in-out infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    font-size: 1em;
 }
 
 @keyframes wiggle {
-    0%, 100% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
+    0%, 100% { 
+        transform: translateZ(0) rotate(-5deg);
+    }
+    50% { 
+        transform: translateZ(0) rotate(5deg);
+    }
 }
 
 .game-subtitle {
